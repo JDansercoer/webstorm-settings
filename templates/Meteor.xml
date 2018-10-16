@@ -1,0 +1,84 @@
+<templateSet group="Meteor">
+  <template name="importMeteor" value="import { Meteor } from 'meteor/meteor';" description="Importing the Meteor library" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importReactDOM" value="import ReactDOM from 'react-dom';" description="Importing the React DOM Library" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importLodash" value="import { lodash as _ } from 'meteor/erasaur:meteor-lodash';" description="Importing the Lodash library" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importMoment" value="import { moment } from 'meteor/momentjs:moment';" description="Importing the Moment library" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importFileUploadField" value="import FileUploadField from '../semantic/FileUploadField';" description="Import the File Upload Field" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importFlowRouter" value="import { FlowRouter } from 'meteor/kadira:flow-router';" description="Import the Flow Router library" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importRadium" value="import Radium from 'radium';" description="Import the Radium library" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importReact" value="import React from 'react';" description="Import the React library" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importPaper" value="import Paper from 'material-ui/Paper';" description="Import the Paper component" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importTextfield" value="import TextField from 'material-ui/TextField';" description="Import the Texfield component" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importAlert" value="import Alert from 'react-s-alert';" description="Import the Alert library" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importTooltip" value="import ReactTooltip from 'react-tooltip';" description="Import the React Tooltip library" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importFlatButton" value="import FlatButton from 'material-ui/FlatButton';&#10;" description="imports flat buttons" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importDialog" value="import Dialog from 'material-ui/Dialog'&#10;" description="Imports the material ui dialog" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="clog" value="console.log($FUNCNAME$);" description="adds a console log" toReformat="false" toShortenFQNames="true">
+    <variable name="FUNCNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="throwE" value="throw new Meteor.Error('$FUNCNAME$');" description="throws a meteor error" toReformat="false" toShortenFQNames="true">
+    <variable name="FUNCNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

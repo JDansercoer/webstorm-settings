@@ -1,0 +1,85 @@
+<templateSet group="React">
+  <template name="reactClass" value="$CLASSNAME$  = React.createClass({&#10;  &#10;  render: function() {&#10;    $CONTENT$&#10;  }&#10;  &#10;});" description="Create a new React class" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASSNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="getData" value="mixins: [ReactMeteorData],&#10;&#10;getMeteorData() {&#10;&#10;  const subHandles = Meteor.subscribe(&quot;$SUBNAME$&quot;$PROPS$);&#10;  const subsReady = subHandles.ready();&#10;&#10;  return {&#10;    $DATANAME$: $QUERY$&#10;    subsReady: subsReady&#10;  };&#10;}," description="Snippet for getting Meteor Data" toReformat="false" toShortenFQNames="true">
+    <variable name="SUBNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROPS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DATANAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="QUERY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="isAdmin" value="if (!Meteor.roles.isAdmin()) {&#10;  throw new Meteor.Error('no-admin&quot;, &quot;You\'re not an admin.');&#10;}&#10;&#10;$FUNCTIONS$" description="Server side check for a method if a user is admin" toReformat="false" toShortenFQNames="true">
+    <variable name="FUNCTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="createComponent" value="import React from 'react';&#10;&#10;class $COMPONENTNAME$ extends React.Component {&#10;  constructor() {&#10;    super();&#10;  }&#10;  &#10;  render() {&#10;    return;&#10;  }&#10;}&#10;&#10;$COMPONENTNAME$.propTypes = {&#10;  &#10;};&#10;&#10;export default $COMPONENTNAME$;&#10;" description="Create a new statefull React Component" toReformat="false" toShortenFQNames="true">
+    <variable name="COMPONENTNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="functionComponent" value="import React from 'react';&#10;&#10;const $COMPONENTNAME$ = (props) =&gt; {&#10;  return (&#10;    &#10;  );&#10;};&#10;&#10;$COMPONENTNAME$.propTypes = {&#10;  &#10;};&#10;&#10;export default $COMPONENTNAME$;&#10;" description="Create a new stateless React function" toReformat="false" toShortenFQNames="true">
+    <variable name="COMPONENTNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="createContainer" value="import { Meteor } from 'meteor/meteor';&#10;import { createContainer } from 'meteor/react-meteor-data';&#10;&#10;import $ChildComponent$ from './$ChildComponent$';&#10;&#10;const $ChildComponent$Container = createContainer((props) =&gt; {&#10;  const subHandle = Meteor.subscribe('');&#10;  const subsReady = subHandle.ready();&#10;&#10;  return {&#10;    subsReady,&#10;    &#10;  };&#10;}, $ChildComponent$);&#10;&#10;export default $ChildComponent$Container;" description="Create a new Meteor Data Container" toReformat="false" toShortenFQNames="true">
+    <variable name="ChildComponent" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="bF" value="this.$FUNCNAME$ = this.$FUNCNAME$.bind(this);" description="Bind a function in the component's constructor" toReformat="false" toShortenFQNames="true">
+    <variable name="FUNCNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="getContext" value=".contextTypes = {&#10;  color: React.PropTypes.string&#10;};" description="Gets the color context" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="isUser" value="if (!Meteor.user()) {&#10;  throw new Meteor.Error('Not logged in.');&#10;}" description="Server side check for a method if a user is present" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="isCommunity" value="if (!Meteor.roles.isCommunityManager()) {&#10;  throw new Meteor.Error('no-admin&quot;, &quot;You\'re not a community manager.');&#10;}&#10;&#10;$FUNCTIONS$" description="Server side check for a method if a user is community moderator" toReformat="false" toShortenFQNames="true">
+    <variable name="FUNCTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="loremIpsum" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit,&#10;              sed do eiusmod tempor incididunt ut labore et dolore&#10;              magna aliqua. Ut enim ad minim veniam, quis nostrud exe&#10;              rcitation ullamco laboris nisi ut aliquip ex ea commodo&#10;              consequat. Duis aute irure dolor in reprehenderit in vol&#10;              uptate velit esse cillum dolore eu fugiat nulla pariatur.&#10;              Excepteur sint occaecat cupidatat non proident, sunt in c&#10;              ulpa qui officia deserunt mollit anim id est laborum." description="generates lorem ipsum" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="setF" value="set$FUNCNAME$(event) {&#10;  this.setState({&#10;    $FUNCNAME$: event.target.value&#10;  });&#10;}" description="set a parameter form a TextField event" toReformat="false" toShortenFQNames="true">
+    <variable name="FUNCNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importToggle" value="import Toggle from 'material-ui/Toggle';&#10;" description="imports the toggle element from materialUI" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importFontIcon" value="import FontIcon from 'material-ui/FontIcon';&#10;" description="imports the FontIcon from material UI" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
